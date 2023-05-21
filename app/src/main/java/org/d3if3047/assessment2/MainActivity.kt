@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.button.setOnClickListener { hitungDiskon() }
+        viewModel.getHasilDiskon().observe(this, { showResult(it) })
     }
 
     private fun hitungDiskon() {
@@ -36,13 +37,13 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, R.string.diskon_invalid, Toast.LENGTH_LONG).show()
             return
         }
-        val result = viewModel.hitungDiskon(
+        viewModel.hitungDiskon(
             harga.toInt(),
             diskon.toInt()
         )
-        showResult(result)
     }
-    private fun showResult(result: HasilDiskon) {
+    private fun showResult(result: HasilDiskon?) {
+        if (result == null) return
         binding.totalTextView.text = getString(R.string.total, result.total.toString())
     }
 }
