@@ -5,11 +5,18 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 import org.d3if3047.assessment2.databinding.ActivityMainBinding
+import org.d3if3047.assessment2.model.HasilDiskon
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+
+    private val viewModel: DiskonViewModel by lazy {
+        ViewModelProvider(this)[DiskonViewModel::class.java]
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -29,13 +36,13 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, R.string.diskon_invalid, Toast.LENGTH_LONG).show()
             return
         }
-
-        val txtHarga = harga.toInt()
-        val txtDiskon = diskon.toInt()
-
-        val potongan = txtHarga * txtDiskon / 100
-        val hasil = txtHarga - potongan
-
-        binding.totalTextView.text = getString(R.string.total, hasil.toString())
+        val result = viewModel.hitungDiskon(
+            harga.toInt(),
+            diskon.toInt()
+        )
+        showResult(result)
+    }
+    private fun showResult(result: HasilDiskon) {
+        binding.totalTextView.text = getString(R.string.total, result.total.toString())
     }
 }
