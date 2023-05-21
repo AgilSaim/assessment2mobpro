@@ -1,4 +1,4 @@
-package org.d3if3047.assessment2
+package org.d3if3047.assessment2.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
