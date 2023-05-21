@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import org.d3if3047.assessment2.R
 import org.d3if3047.assessment2.databinding.FragmentHitungBinding
-import org.d3if3047.assessment2.model.HasilDiskon3
+import org.d3if3047.assessment2.model.HasilDiskon
 
 class HitungFragment : Fragment() {
 
