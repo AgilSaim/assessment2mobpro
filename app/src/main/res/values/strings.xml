@@ -17,4 +17,6 @@ dalam memenuhi Assessment 2 Mobpro1. Temukan kodenya di https://github.com/AgilS
     <string name="bagikan_template">Harga: %1s\nDiskon: %2s\n %3s</string>
     <string name="belum_ada_data">Belum ada data</string>
     <string name="histori">Histori</string>
+    <string name="hasil_x">Total: %1s</string>
+    <string name="data_x">Harga: %1s - Diskon: %2s</string>
 </resources>

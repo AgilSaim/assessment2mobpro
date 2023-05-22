@@ -10,23 +10,22 @@ import kotlinx.coroutines.withContext
 import org.d3if3047.assessment2.db.DiskonDao
 import org.d3if3047.assessment2.db.DiskonEntity
 import org.d3if3047.assessment2.model.HasilDiskon
+import org.d3if3047.assessment2.model.hitungDiskon
 
 class HitungViewModel(private val db: DiskonDao) : ViewModel() {
 
     private val hasilDiskon = MutableLiveData<HasilDiskon?>()
 
     fun hitungDiskon(harga: Int, diskon: Int, total: Int) {
-        val potongan = harga * diskon / 100
-        val total = harga - potongan
-        hasilDiskon.value = HasilDiskon(total)
+        val dataDiskon = DiskonEntity(
+            harga = harga,
+            diskon = diskon,
+            total = total
+        )
+        hasilDiskon.value = dataDiskon.hitungDiskon()
 
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
-                val dataDiskon = DiskonEntity(
-                    harga = harga,
-                    diskon = diskon,
-                    total = total
-                )
                 db.insert(dataDiskon)
             }
         }
