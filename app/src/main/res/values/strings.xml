@@ -19,4 +19,8 @@ dalam memenuhi Assessment 2 Mobpro1. Temukan kodenya di https://github.com/AgilS
     <string name="histori">Histori</string>
     <string name="hasil_x">Total: %1s</string>
     <string name="data_x">Harga: %1s - Diskon: %2s</string>
+    <string name="hapus_histori">Hapus Histori</string>
+    <string name="konfirmasi_hapus">Hapus semua histori?</string>
+    <string name="hapus">Hapus</string>
+    <string name="batal">Batal</string>
 </resources>
