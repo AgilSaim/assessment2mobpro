@@ -15,8 +15,6 @@ class HitungViewModel(private val db: DiskonDao) : ViewModel() {
 
     private val hasilDiskon = MutableLiveData<HasilDiskon?>()
 
-    val data = db.getLastDiskon()
-
     fun hitungDiskon(harga: Int, diskon: Int, total: Int) {
         val potongan = harga * diskon / 100
         val total = harga - potongan
