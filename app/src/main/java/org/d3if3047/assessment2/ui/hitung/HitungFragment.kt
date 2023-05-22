@@ -24,7 +24,11 @@ class HitungFragment : Fragment() {
         ViewModelProvider(this, factory)[HitungViewModel::class.java]
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         binding = FragmentHitungBinding.inflate(layoutInflater, container, false)
         setHasOptionsMenu(true)
         return binding.root
@@ -39,33 +43,6 @@ class HitungFragment : Fragment() {
             if (it == null) return@observe
             Log.d("HitungFragment", "Data tersimpan. ID = ${it.id}")
         })
-    }
-
-    private fun shareData() {
-        val message = getString(R.string.bagikan_template,
-            binding.hargaEditText.text,
-            binding.diskonEditText.text,
-            binding.totalTextView.text,
-        )
-        val shareIntent = Intent(Intent.ACTION_SEND)
-        shareIntent.setType("text/plain").putExtra(Intent.EXTRA_TEXT, message)
-        if (shareIntent.resolveActivity(
-                requireActivity().packageManager) != null) {
-            startActivity(shareIntent)
-        }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.options_menu, menu)
-    }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.menu_about) {
-            findNavController().navigate(
-                R.id.action_hitungFragment_to_aboutFragment)
-            return true
-        }
-        return super.onOptionsItemSelected(item)
     }
 
     private fun hitungDiskon() {
@@ -87,9 +64,46 @@ class HitungFragment : Fragment() {
             total.toInt()
         )
     }
+
     private fun showResult(result: HasilDiskon?) {
         if (result == null) return
         binding.totalTextView.text = getString(R.string.total, result.total.toString())
         binding.buttonGroup.visibility = View.VISIBLE
+    }
+
+    private fun shareData() {
+        val message = getString(
+            R.string.bagikan_template,
+            binding.hargaEditText.text,
+            binding.diskonEditText.text,
+            binding.totalTextView.text,
+        )
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.setType("text/plain").putExtra(Intent.EXTRA_TEXT, message)
+        if (shareIntent.resolveActivity(
+                requireActivity().packageManager
+            ) != null
+        ) {
+            startActivity(shareIntent)
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.options_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.menu_histori -> {
+                findNavController().navigate(R.id.action_hitungFragment_to_historiFragment)
+                return true
+            }
+            R.id.menu_about -> {
+                findNavController().navigate(R.id.action_hitungFragment_to_aboutFragment)
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

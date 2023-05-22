@@ -14,5 +14,7 @@ harga dari suatu barang tersebut tepat atau tidak.\n\nAplikasi ini dibuat oleh A
 dalam memenuhi Assessment 2 Mobpro1. Temukan kodenya di https://github.com/AgilSaim/assessment2mobpro.git
         \n\nCopyright © 2023 Agil Saim Setiawan.\nAll rights reserved.</string>
     <string name="bagikan">Bagikan</string>
-    <string name="bagikan_template">Harga: %1s\nDiskon: %2s\nTotal : %3s</string>
+    <string name="bagikan_template">Harga: %1s\nDiskon: %2s\n %3s</string>
+    <string name="belum_ada_data">Belum ada data</string>
+    <string name="histori">Histori</string>
 </resources>
