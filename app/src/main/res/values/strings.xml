@@ -23,4 +23,7 @@ dalam memenuhi Assessment 2 Mobpro1. Temukan kodenya di https://github.com/AgilS
     <string name="konfirmasi_hapus">Hapus semua histori?</string>
     <string name="hapus">Hapus</string>
     <string name="batal">Batal</string>
+    <string name="barang">Barang</string>
+    <string name="koneksi_error">Koneksi eror.</string>
+    <string name="message">%1$s diklik!</string>
 </resources>

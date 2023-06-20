@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/baseline_broken_image_24" />
+
+    <TextView
+        android:id="@+id/tvNamaBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tas" />
+
+    <TextView
+        android:id="@+id/tvJumlahBarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/tvNamaBarang"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamaBarang"
+        tools:text="50000" />
+
+    <TextView
+        android:id="@+id/tvDiskon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/tvJumlahBarang"
+        app:layout_constraintTop_toBottomOf="@+id/tvJumlahBarang"
+        tools:text="50%" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

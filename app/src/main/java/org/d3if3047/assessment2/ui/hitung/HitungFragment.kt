@@ -95,6 +95,9 @@ class HitungFragment : Fragment() {
                 findNavController().navigate(R.id.action_hitungFragment_to_historiFragment)
                 return true
             }
+            R.id.menu_barang -> {
+                findNavController().navigate(R.id.action_hitungFragment_to_barangFragment)
+            }
             R.id.menu_about -> {
                 findNavController().navigate(R.id.action_hitungFragment_to_aboutFragment)
                 return true

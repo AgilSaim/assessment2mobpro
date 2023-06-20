@@ -1,5 +1,6 @@
 package org.d3if3047.assessment2.ui.histori
 
+import android.annotation.SuppressLint
 import android.graphics.drawable.GradientDrawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -50,6 +51,7 @@ class HistoriAdapter :
         private val dateFormatter = SimpleDateFormat("dd MMMM yyyy",
             Locale("id", "ID")
         )
+        @SuppressLint("StringFormatMatches")
         fun bind(item: DiskonEntity) = with(binding) {
             val hasilDiskon = item.hitungDiskon()
             kategoriTextView.text = hasilDiskon.total.toString().substring(0, 1)
