@@ -2,61 +2,61 @@
     {
         "namabarang": "Buku Tulis",
         "hargabarang": 5000,
-        "diskon": 10,
+        "diskon": 10%,
         "img": "https://www.xfourgraphix.co.id/wp-content/uploads/2016/12/cetak-buku-tulis-sekolah-jakarta.jpg"
     },
     {
         "namabarang": "Kaos Polos",
         "hargabarang": 75000,
-        "diskon": 20,
+        "diskon": 20%,
         "img": "https://s0.bukalapak.com/img/0280054382/w-1000/Amaris_Fashion___Kaos_Oblong_Hitam_Polos___Kaos_Atasan_Pria.jpg"
     },
     {
         "namabarang": "Smartphone",
         "hargabarang": 5000000,
-        "diskon": 15,
+        "diskon": 15%,
         "img": "https://image-us.bigbuy.win/upload/image/assistant_no_logo/2510200008511/2510200008511-2.jpg"
     },
     {
         "namabarang": "Pizza",
         "hargabarang": 100000,
-        "diskon": 10,
+        "diskon": 10%,
         "img": "https://riotfest.org/wp-content/uploads/2016/10/p-evid1.jpg"
     },
     {
         "namabarang": "Kopi",
         "hargabarang": 15000,
-        "diskon": 20,
+        "diskon": 20%,
         "img": "https://1.bp.blogspot.com/-Yz1HIk60Mlg/VjU-ZmLGGTI/AAAAAAAAAHE/jGywutFvQwo/s1600/Kopi.JPG"
     },
     {
         "namabarang": "Cincin Emas",
         "hargabarang": 2000000,
-        "diskon": 20,
+        "diskon": 20%,
         "img": "https://s3.bukalapak.com/img/350078113/w-1000/Cincin_Kawin__Pernikahan__Couple__Tunangan_Perak_Emas_Pallad.jpg"
     },
     {
         "namabarang": "Boneka Barbie",
         "hargabarang": 500000,
-        "diskon": 15,
+        "diskon": 15%,
         "img": "https://cdn.smartkiddo.com/uploads/cache/data/toys/18010004-barbie-combo-1-100-4-900.jpg"
     },
     {
         "namabarang": "Blender",
         "hargabarang": 300000,
-        "diskon": 10,
+        "diskon": 10%,
         "img": "https://cdn1.productnation.co/optimized/1024w/stg/sites/5/5efeb5e62a722.jpeg"
     },
     {
         "namabarang": "Gitar Akustik",
         "hargabarang": 1000000,
-        "diskon": 15,
+        "diskon": 15%,
         "img": "https://www.nehirsazevi.com.tr/wp-content/uploads/2017/10/akustik_gitar_sanchez_uygun_fiyata_gitar_CEB41N_1.jpg"
     },
     {
         "namabarang": "Mobil",
         "hargabarang": 50000000,
-        "diskon": 12,
+        "diskon": 12%,
         "img": "https://barrettjacksoncdn.azureedge.net/staging/carlist/items/Fullsize/Cars/239046/239046_Front_3-4_Web.jpg"
     }
 ]
