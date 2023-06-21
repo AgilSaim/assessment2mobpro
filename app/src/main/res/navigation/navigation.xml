@@ -33,6 +33,6 @@
     <fragment
         android:id="@+id/barangFragment"
         android:name="org.d3if3047.assessment2.ui.barang.BarangFragment"
-        android:label="fragment_barang"
+        android:label="Barang Diskon"
         tools:layout="@layout/fragment_barang" />
 </navigation>
